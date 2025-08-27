@@ -1,20 +1,46 @@
-import type { Preview } from '@storybook/react-vite'
+import type { Preview } from "@storybook/react-vite";
 
 const preview: Preview = {
   parameters: {
     controls: {
       matchers: {
-       color: /(background|color)$/i,
-       date: /Date$/i,
+        color: /(background|color)$/i,
+        date: /Date$/i,
       },
     },
 
+    // 전역 a11y 설정
     a11y: {
-      // 'todo' - show a11y violations in the test UI only
-      // 'error' - fail CI on a11y violations
-      // 'off' - skip a11y checks entirely
-      test: 'todo'
-    }
+      // axe-core 설정
+      config: {
+        rules: [
+          // 색상 대비 검사 활성화
+          {
+            id: "color-contrast",
+            enabled: true,
+          },
+          // 포커스 순서 검사
+          {
+            id: "focus-order-semantics",
+            enabled: true,
+          },
+          // ARIA 라벨 검사
+          {
+            id: "aria-label",
+            enabled: true,
+          },
+          // 키보드 접근성 검사
+          {
+            id: "keyboard",
+            enabled: true,
+          },
+        ],
+      },
+      // 검사할 요소 지정 (선택사항)
+      context: "#storybook-root",
+      // 수동 검사 활성화
+      manual: true,
+    },
   },
 };
 
