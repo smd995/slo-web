@@ -102,11 +102,11 @@ export const HomeUI = ({ isLoggined, likeCount }: HomeUIProps) => {
             <button
               role="tab"
               aria-selected="true"
-              aria-controls="subcategory-mindfulness"
-              id="tab-mindfulness"
+              aria-controls="subcategory-food-tour"
+              id="tab-food-tour"
               className="category-tab active"
             >
-              마인드풀니스
+              맛집 투어
             </button>
             <button
               role="tab"
@@ -120,13 +120,13 @@ export const HomeUI = ({ isLoggined, likeCount }: HomeUIProps) => {
           </div>
           {/* 하위 카테고리 */}
           <div
-            id="subcategory-mindfulness"
+            id="subcategory-food-tour"
             role="tabpanel"
-            aria-labelledby="tab-mindfulness"
+            aria-labelledby="tab-food-tour"
             className="subcategories"
           >
             <fieldset>
-              <legend className="sr-only">마인드풀니스 하위 카테고리</legend>
+              <legend className="sr-only">맛집 투어 하위 카테고리</legend>
               <div className="subcategory-options">
                 <label>
                   <input
@@ -138,12 +138,12 @@ export const HomeUI = ({ isLoggined, likeCount }: HomeUIProps) => {
                   <span>전체</span>
                 </label>
                 <label>
-                  <input type="radio" name="subcategory" value="yoga" />
-                  <span>요가</span>
+                  <input type="radio" name="subcategory" value="food" />
+                  <span>음식</span>
                 </label>
                 <label>
-                  <input type="radio" name="subcategory" value="meditation" />
-                  <span>명상</span>
+                  <input type="radio" name="subcategory" value="cafe" />
+                  <span>카페</span>
                 </label>
               </div>
             </fieldset>
@@ -231,9 +231,13 @@ export const HomeUI = ({ isLoggined, likeCount }: HomeUIProps) => {
             모임 목록
           </h3>
           <div className="meetings-grid" role="grid" aria-label="모임 목록">
-            {/* 모임 카드들이 여기에 렌더링 */}
-            <div className="meeting-card" role="gridcell">
-              {/* 모임 카드 내용 */}
+            <div role="row">
+              <div className="meeting-card" role="gridcell">
+                모임 카드 내용
+              </div>
+              <div className="meeting-card" role="gridcell">
+                모임 카드 내용
+              </div>
             </div>
           </div>
 
