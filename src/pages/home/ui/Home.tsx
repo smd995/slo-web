@@ -56,7 +56,7 @@ const Home = () => {
     };
   }, []);
 
-  return <HomeUI isLoggined={false} likeCount={0}></HomeUI>;
+  return <HomeUI isLoggined={true} likeCount={999}></HomeUI>;
 };
 
 export default Home;

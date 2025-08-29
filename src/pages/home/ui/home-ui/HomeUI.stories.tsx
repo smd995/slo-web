@@ -38,3 +38,33 @@ export default meta;
 type Story = StoryObj<typeof HomeUI>;
 
 export const Default: Story = {};
+
+export const LoggedInUser: Story = {
+  args: {
+    isLoggined: true,
+    likeCount: 0,
+  },
+  parameters: {
+    docs: {
+      description: {
+        story:
+          "로그인한 사용자의 기본 상태입니다. 찜한 모임이 없는 상태를 보여줍니다.",
+      },
+    },
+  },
+};
+
+export const LoggedInUserWithLikes: Story = {
+  args: {
+    isLoggined: true,
+    likeCount: 12,
+  },
+  parameters: {
+    docs: {
+      description: {
+        story:
+          "로그인한 사용자가 여러 모임을 찜한 상태입니다. 찜 개수가 표시됩니다.",
+      },
+    },
+  },
+};
