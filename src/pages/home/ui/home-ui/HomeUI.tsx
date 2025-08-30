@@ -1143,8 +1143,212 @@ export const HomeUI = ({ isLoggined, likeCount }: HomeUIProps) => {
       </main>
 
       {/* 푸터는 필요시 추가 */}
-      <footer className="site-footer" role="contentinfo">
-        {/* 푸터 내용 */}
+      <footer
+        className="site-footer bg-secondary-50 border-t border-secondary-200"
+        role="contentinfo"
+      >
+        <div className="footer-container mx-auto max-w-[1200px] px-4 py-12">
+          {/* Footer 메인 콘텐츠 */}
+          <div className="footer-content grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+            {/* 브랜드 섹션 */}
+            <div className="footer-brand md:col-span-2">
+              <div className="flex items-center gap-3 mb-4">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 719.32 396.03"
+                  fill="#1f2937"
+                  height={32}
+                  style={{ width: "auto" }}
+                  role="img"
+                  aria-label="SLO 로고"
+                >
+                  <path d="M192.3,262.05c-13.53-13.72-61.31-21.72-81.41-28.09C53.94,215.93,9.88,186.77,12.61,120.16,17.12,10.27,152.7-20.26,235.68,25.18c18.08,9.9,41.1,26.88,33.45,50.49-2.36,7.3-13.86,21.22-20,26-18.45,14.38-30.47-1-48.21-7.74-24.44-9.29-62.22-15.45-84.18,2.35-12.17,9.87-15.61,29.1-6.06,41.89,13.47,18.03,61.2,25.43,82.97,32.03,52,15.75,92.83,41.39,95.04,100.96,4.51,121.52-144.64,141.57-231.72,101.72-41.71-19.09-76.54-48.53-24.23-84.59,20.48-14.12,25.73-2.51,42.61,7.22,28.6,16.48,82.43,33.16,111.22,10.61,12.84-10.05,17.87-31.75,5.73-44.06Z" />
+                  <path d="M566.45,106.99l11.7-.28c155.5,5.01,178.17,230.41,35.27,274.25-62.31,19.12-131.99-10.21-161.31-68.22-45.48-89.98,12.45-200.36,114.34-205.75ZM565.43,177.97c-75.78,8.59-70.42,144.58,12.71,137.71,79.96-6.61,74.11-147.55-12.71-137.71Z" />
+                  <path d="M395.31,375.34c-2.38,2.23-6.89,4-10.15,4.36-9.43,1.03-35.72,1.18-44.91-.09-6.12-.84-11.93-5.35-13.54-11.46l-.07-338.97c.54-5.12,5.55-9.67,10.61-10.39,8.84-1.25,43.18-1.37,51.84-.03,5.73.89,9.76,5.95,10.48,11.52l-.84,339.98c-.99,1.51-2.18,3.91-3.42,5.08Z" />
+                </svg>
+                <span className="text-xl font-bold text-secondary-900">
+                  SLO
+                </span>
+              </div>
+              <p className="text-secondary-600 text-sm leading-relaxed mb-4">
+                함께 하는 즐거움을 발견하세요.
+                <br />
+                다양한 모임과 클래스를 통해 새로운 사람들과 만나고
+                <br />
+                특별한 경험을 나누어보세요.
+              </p>
+              <div className="flex gap-4">
+                <a
+                  href="#"
+                  className="text-secondary-500 hover:text-secondary-700 transition-colors"
+                  aria-label="인스타그램 페이지로 이동"
+                >
+                  <svg
+                    className="w-5 h-5"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                  >
+                    <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 6.621 5.367 11.988 11.988 11.988c6.62 0 11.987-5.367 11.987-11.988C24.004 5.367 18.637.001 12.017.001zM8.449 16.988c-1.297 0-2.448-.73-3.016-1.804L4.27 12.987l1.163-2.197c.568-1.074 1.719-1.804 3.016-1.804s2.448.73 3.016 1.804l1.163 2.197l-1.163 2.197c-.568 1.074-1.719 1.804-3.016 1.804zm7.119 0c-1.297 0-2.448-.73-3.016-1.804l-1.163-2.197l1.163-2.197c.568-1.074 1.719-1.804 3.016-1.804s2.448.73 3.016 1.804l1.163 2.197l-1.163 2.197c-.568 1.074-1.719 1.804-3.016 1.804z" />
+                  </svg>
+                </a>
+                <a
+                  href="#"
+                  className="text-secondary-500 hover:text-secondary-700 transition-colors"
+                  aria-label="페이스북 페이지로 이동"
+                >
+                  <svg
+                    className="w-5 h-5"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                  >
+                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                  </svg>
+                </a>
+                <a
+                  href="#"
+                  className="text-secondary-500 hover:text-secondary-700 transition-colors"
+                  aria-label="유튜브 채널로 이동"
+                >
+                  <svg
+                    className="w-5 h-5"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                  >
+                    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+            {/* 빠른 링크 */}
+            <div className="footer-links">
+              <h3 className="text-secondary-900 font-semibold mb-4">서비스</h3>
+              <nav aria-label="서비스 관련 링크">
+                <ul className="space-y-3">
+                  <li>
+                    <a
+                      href="/"
+                      className="text-secondary-600 hover:text-secondary-900 transition-colors text-sm"
+                    >
+                      모임찾기
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="/liked"
+                      className="text-secondary-600 hover:text-secondary-900 transition-colors text-sm"
+                    >
+                      찜한모임
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="/reviews"
+                      className="text-secondary-600 hover:text-secondary-900 transition-colors text-sm"
+                    >
+                      모든리뷰
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="/meetings/create"
+                      className="text-secondary-600 hover:text-secondary-900 transition-colors text-sm"
+                    >
+                      모임만들기
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+
+            {/* 고객지원 */}
+            <div className="footer-support">
+              <h3 className="text-secondary-900 font-semibold mb-4">
+                고객지원
+              </h3>
+              <nav aria-label="고객지원 관련 링크">
+                <ul className="space-y-3">
+                  <li>
+                    <a
+                      href="/help"
+                      className="text-secondary-600 hover:text-secondary-900 transition-colors text-sm"
+                    >
+                      도움말
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="/faq"
+                      className="text-secondary-600 hover:text-secondary-900 transition-colors text-sm"
+                    >
+                      자주묻는질문
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="/contact"
+                      className="text-secondary-600 hover:text-secondary-900 transition-colors text-sm"
+                    >
+                      문의하기
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="/report"
+                      className="text-secondary-600 hover:text-secondary-900 transition-colors text-sm"
+                    >
+                      신고하기
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+
+          {/* 구분선 */}
+          <hr className="border-secondary-200 mb-6" aria-hidden="true" />
+
+          {/* Footer 하단 */}
+          <div className="footer-bottom flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+            <div className="footer-legal">
+              <p className="text-secondary-500 text-sm mb-2 md:mb-0">
+                © 2025 SLO. All rights reserved.
+              </p>
+              <nav
+                aria-label="법적 고지 관련 링크"
+                className="flex flex-wrap gap-4"
+              >
+                <a
+                  href="/privacy"
+                  className="text-secondary-500 hover:text-secondary-700 transition-colors text-xs"
+                >
+                  개인정보처리방침
+                </a>
+                <a
+                  href="/terms"
+                  className="text-secondary-500 hover:text-secondary-700 transition-colors text-xs"
+                >
+                  이용약관
+                </a>
+                <a
+                  href="/youth-policy"
+                  className="text-secondary-500 hover:text-secondary-700 transition-colors text-xs"
+                >
+                  청소년보호정책
+                </a>
+              </nav>
+            </div>
+
+            <div className="footer-info text-secondary-500 text-xs">
+              <p>사업자등록번호: 123-45-67890</p>
+              <p>통신판매업신고번호: 제2025-서울강남-12345호</p>
+              <p>대표이사: 홍길동 | 서울특별시 강남구 테헤란로 123</p>
+            </div>
+          </div>
+        </div>
       </footer>
     </div>
   );
